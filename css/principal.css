@@ -70,4 +70,4 @@ hr{height:2px;border:none;background:url(../images/hr.gif) repeat-x;margin:0 30p
 #cabecalho ul#menu li a:hover{color:#555; border-bottom:2px solid #e3e3e3; border-margin:10px;}
 #cabecalho ul#menu li.active a{color:#555;}
 
-#conteudo{position:relative;margin:25px 30px 0 50px;height:240px;overflow:hidden}
+#conteudo{position:relative;margin:25px 30px 0 50px;height:240px;}
