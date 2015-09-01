@@ -1,0 +1,73 @@
+
+body{
+	line-height:1;
+	font-size:11px;
+	font-family:"Lucida Grande",Verdana,sans-serif;
+	background:#000 url(../images/fundo.jpg) center;
+}
+
+h1, h2, p, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a{color:#6aa2c5}
+p{padding:10px 15px 0 0;color:#777;text-shadow:1px 1px 1px #fff;line-height:16px}
+h1{color:#555;font-size:26px;font-weight:normal;text-shadow:1px 1px 1px #fff;margin-bottom:10px}
+h2{color:#636363;font-size:19px;font-weight:normal;text-shadow:1px 1px 1px #fff;padding:0;margin-bottom:15px}
+ul li,ol li{padding:5px 0 5px 0;color:#777;text-shadow:1px 1px 1px #fff;list-style:square inside}
+hr{height:2px;border:none;background:url(../images/hr.gif) repeat-x;margin:0 30px}
+
+.espaco{height:1px}
+
+#painel{
+   position: absolute;
+   top: 50%;
+   margin-top: -225px;
+   left: 0;
+   width: 100%;
+}
+
+#corpo{
+   	margin-left: auto;
+   	margin-right: auto;
+	position:relative;
+	margin:auto;
+	width:800px;
+	height:450px;
+	background:url(../images/fundo.png);
+	-webkit-box-shadow:0 0 0px #000;
+	-moz-box-shadow:0 0 0px #000;
+	box-shadow:0 0 0px #000;
+}
+
+.esquerda{
+	float:left;
+	margin:0px;
+	width:220px;
+	height:240px;
+}
+
+.direita{
+	float:right;
+	width:430px;
+	margin-right:20px;
+	background:url(../images/barra.png) repeat-y;
+	padding-left:40px
+}
+
+#cabecalho{margin:30px 30px 0 30px;height:100px}
+#cabecalho .profilepicture{float:left}
+#cabecalho .profilepicture img{width:80px;height:80px}
+#cabecalho #logo{float:left;text-indent:-9999px;background:url(../images/logo.png);margin:7px 0 0 20px;width:300px;height:80px}
+#cabecalho ul#menu{float:right;height:45px;margin:14px 20px 0 0;padding:0 15px 0 0;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+#cabecalho ul#menu li{float:left;padding:16px 0 0 15px;font-weight:bold;font-size:13px;text-transform:uppercase;color:#999;text-shadow:1px 1px 1px #fff;list-style:none}
+#cabecalho ul#menu li a{color:#999;text-decoration:none}
+#cabecalho ul#menu li a:hover{color:#555; border-bottom:2px solid #e3e3e3; border-margin:10px;}
+#cabecalho ul#menu li.active a{color:#555;}
+
+#conteudo{position:relative;margin:25px 30px 0 50px;height:240px;overflow:hidden}
