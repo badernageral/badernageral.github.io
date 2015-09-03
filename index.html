@@ -11,10 +11,47 @@
         <meta property="og:image" content="http://badernageral.github.io/financas.png" />
         <meta property="og:site_name" content="BG Financas - Gerenciador de despesas" />
         <meta property="fb:admins" content="100002192123595" />
+        <script language="javascript">
+            function traduzirIngles(){
+                document.getElementById("logo").style.background = "url('images/logo_en.png')";
+                setValor("menuRepositorio","Repository");
+                setValor("menuSuporte","Support/Bugs");
+                setValor("bem_vindo","Welcome");
+                setValor("funcionalidades","Features");
+                setValor("fun01","Control of expenses and income");
+                setValor("fun02","Accounts to store money");
+                setValor("fun03","Limit specific expenses");
+                setValor("fun04","Simple and complex reports");
+                setValor("fun05","Planning divided into months");
+                setValor("fun06","Scheduler for reminders");
+                setValor("download_direto","Direct download:");
+                setValor("descricao","BG Finanças is an open source software facing you who want to control their financial lives, their focus is to use accounts to store money and launch expenses / revenues to change the balance of accounts. Relying on its planning module, reports and ability to track spending, BG Finanças will be a great ally in the management of their money.");
+                setValor("java","For the system to work you need to install <font style='font-weight:bold !important'>Java</font>.<br />Download it by clicking <a href='http://java.com/pt_BR/' target='_blank'>here</a>.");
+            }
+            function traduzirPortugues(){
+                document.getElementById("logo").style.background = "url('images/logo.png')";
+                setValor("menuRepositorio","Repositório");
+                setValor("menuSuporte","Suporte/Bugs");
+                setValor("bem_vindo","Seja bem vindo");
+                setValor("funcionalidades","Funcionalidades");
+                setValor("fun01","Controle de despesas e receitas");
+                setValor("fun02","Contas para armazenar dinheiro");
+                setValor("fun03","Limitar gastos especificos");
+                setValor("fun04","Relatórios simples e complexos");
+                setValor("fun05","Planejamento dividido em meses");
+                setValor("fun06","Agenda para lembretes");
+                setValor("download_direto","Download direto:");
+                setValor("descricao","BG Finanças é um software open source voltado para você que quer controlar sua vida financeira, seu foco é usar contas para armazenar dinheiro e lançar despesas/receitas para alterar o saldo das contas. Contando com seu módulo de planejamento, relatórios e capacidade de acompanhar os gastos, BG Finanças será um grande aliado na gerência de seu dinheiro.");
+                setValor("java","Para que o sistema funcione é necessário instalar o <font style='font-weight:bold !important'>Java</font>.<br />Faça o download clicando <a href='http://java.com/pt_BR/' target='_blank'>aqui</a>.");
+            }
+            function setValor(campo, valor){
+                document.getElementById(campo).innerHTML = valor;
+            }
+        </script>
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>(function (d, s, id) {
+        <!--<script>(function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id))
                     return;
@@ -22,24 +59,29 @@
                 js.id = id;
                 js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
                 fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+            }(document, 'script', 'facebook-jssdk'));</script>-->
         <div id="painel">
             <div id="corpo">
                 <div class="espaco"></div>
                 <div id="cabecalho">
                     <div id="logo">BG Finanças</div>
                     <ul id="menu">
-                        <li><a target="_blank" href="https://github.com/badernageral/bgfinancas">Repositório</a></li>
-                        <li><a target="_blank" href="https://github.com/badernageral/bgfinancas/issues">Suporte/Bugs</a></li>
+                        <li><a id="menuRepositorio" target="_blank" href="https://github.com/badernageral/bgfinancas">Repositório</a></li>
+                        <li><a id="menuSuporte" target="_blank" href="https://github.com/badernageral/bgfinancas/issues">Suporte/Bugs</a></li>
                         <li><a target="_blank" href="https://github.com/badernageral/bgfinancas/releases">Download</a></li>
                     </ul>
+                    <div id="linguagem">
+                        Language:
+                        <a href="#" onclick="return traduzirPortugues();"><img align="middle" src="language/portugues.png" /></a>
+                        <a href="#" onclick="return traduzirIngles();"><img align="middle" src="language/english.png" /></a>
+                    </div>
                 </div>
                 <hr/>
                 <div id="conteudo">
                     <div class="direita">
                         <div class="fb-like" data-href="http://badernageral.github.io/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
                         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://badernageral.github.io/" data-text="Financas - um otimo gerenciador financeiro" data-lang="pt" data-hashtags="bgfinancas">Tweetar</a>
-                        <script>!function (d, s, id) {
+                        <!--<script>!function (d, s, id) {
                                 var js, fjs = d.getElementsByTagName(s)[0];
                                 if (!d.getElementById(id)) {
                                     js = d.createElement(s);
@@ -47,25 +89,25 @@
                                     js.src = "//platform.twitter.com/widgets.js";
                                     fjs.parentNode.insertBefore(js, fjs);
                                 }
-                            }(document, "script", "twitter-wjs");</script>
+                            }(document, "script", "twitter-wjs");</script>-->
                         </br></br>
-                        <h1>Seja bem vindo</h1>
-                        <p align="justify">&nbsp;&nbsp;&nbsp;BG Finanças é um software open source voltado para você que quer controlar sua vida financeira, seu foco é usar contas para armazenar dinheiro e lançar despesas/receitas para alterar o saldo das contas. Contando com seu módulo de planejamento, relatórios e capacidade de acompanhar os gastos, BG Finanças será um grande aliado na gerência de seu dinheiro.</p>
-                        <p>Para que o sistema funcione é necessário instalar o <font style="font-weight:bold !important">Java</font>.<br />
+                        <h2 id="bem_vindo">Seja bem vindo</h2>
+                        <p align="justify" id="descricao">BG Finanças é um software open source voltado para você que quer controlar sua vida financeira, seu foco é usar contas para armazenar dinheiro e lançar despesas/receitas para alterar o saldo das contas. Contando com seu módulo de planejamento, relatórios e capacidade de acompanhar os gastos, BG Finanças será um grande aliado na gerência de seu dinheiro.</p>
+                        <p id="java">Para que o sistema funcione é necessário instalar o <font style="font-weight:bold !important">Java</font>.<br />
                             Faça o download clicando <a href="http://java.com/pt_BR/" target="_blank">aqui</a>.</p>
                     </div>
                     <div class="esquerda">
-                        <h2>Funcionalidades</h2>
+                        <h2 id="funcionalidades">Funcionalidades</h2>
                         <ul>
-                            <li>Controle de despesas e receitas</li>
-                            <li>Contas para armazenar dinheiro</li>
-                            <li>Limitar gastos especificos</li>
-                            <li>Relatórios simples e complexos</li>
-                            <li>Planejamento dividido em meses</li>
-                            <li>Agenda para lembretes</li>
+                            <li id="fun01">Controle de despesas e receitas</li>
+                            <li id="fun02">Contas para armazenar dinheiro</li>
+                            <li id="fun03">Limitar gastos especificos</li>
+                            <li id="fun04">Relatórios simples e complexos</li>
+                            <li id="fun05">Planejamento dividido em meses</li>
+                            <li id="fun06">Agenda para lembretes</li>
                         </ul>
                         <div align="center" style="margin-left:-20px;">
-                            <p style="padding-bottom:5px;padding-left:18px;">Download direto:</p>
+                            <p id="download_direto" style="padding-bottom:5px;padding-left:18px;">Download direto:</p>
                             <a href="https://github.com/badernageral/bgfinancas/releases/download/3.0/bgfinancas_3.0_windows.exe"><img src="windows.png" /></a>
                             <a href="https://github.com/badernageral/bgfinancas/releases/download/3.0/bgfinancas_3.0_all.tar"><img src="outros.png" /></a>
                         </div>

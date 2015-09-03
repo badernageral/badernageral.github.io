@@ -71,3 +71,14 @@ hr{height:2px;border:none;background:url(../images/hr.gif) repeat-x;margin:0 30p
 #cabecalho ul#menu li.active a{color:#555;}
 
 #conteudo{position:relative;margin:25px 30px 0 50px;height:240px;}
+
+#linguagem{
+	float: right;
+	padding-right: 35px;
+	font-size:10px;
+	color:#999;
+	font-weight:bold;
+}
+#linguagem img{
+	padding-bottom: 5px;
+}
