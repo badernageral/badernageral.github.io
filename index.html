@@ -12,7 +12,28 @@
         <meta property="og:site_name" content="BG Financas - Gerenciador de despesas" />
         <meta property="fb:admins" content="100002192123595" />
         <script language="javascript">
+            var versaoAtual = '';
+            var dataLancamento = '';
+            var idiomaAtual = 'pt';
+
+            fetch('https://api.github.com/repos/badernageral/bgfinancas/releases/latest')
+              .then(function(r){ return r.json(); })
+              .then(function(data){
+                versaoAtual = data.tag_name.replace('v','');
+                dataLancamento = data.published_at.substring(0,10);
+                atualizarVersao();
+              });
+
+            function atualizarVersao(){
+                if(!versaoAtual) return;
+                if(idiomaAtual === 'en'){
+                    setValor("download_direto","Version "+versaoAtual+" ("+dataLancamento+")<br>Direct download:");
+                } else {
+                    setValor("download_direto","Versão "+versaoAtual+" ("+dataLancamento+")<br>Download direto:");
+                }
+            }
             function traduzirIngles(){
+                idiomaAtual = 'en';
                 document.getElementById("logo").style.background = "url('images/logo_en.png')";
                 setValor("menuRepositorio","Repository");
                 setValor("menuSuporte","Support/Bugs");
@@ -24,11 +45,12 @@
                 setValor("fun04","Simple and complex reports");
                 setValor("fun05","Planning");
                 setValor("fun06","Reminders");
-                setValor("download_direto","Version 3.8 (2026-05-01)<br>Direct download:");
                 setValor("descricao","BG Finanças is an open source software facing you who want to control their financial lives, their focus is to use accounts to store money and launch expenses / revenues to change the balance of accounts. Relying on its planning module, reports and ability to track spending, BG Finanças will be a great ally in the management of their money.");
                 setValor("java","For the system to work you need to install <font style='font-weight:bold !important'>Java</font>.<br />Download it by clicking <a href='http://java.com/pt_BR/' target='_blank'>here</a>.");
+                atualizarVersao();
             }
             function traduzirPortugues(){
+                idiomaAtual = 'pt';
                 document.getElementById("logo").style.background = "url('images/logo.png')";
                 setValor("menuRepositorio","Repositório");
                 setValor("menuSuporte","Suporte/Bugs");
@@ -40,9 +62,9 @@
                 setValor("fun04","Relatórios simples e complexos");
                 setValor("fun05","Planejamento");
                 setValor("fun06","Lembretes");
-                setValor("download_direto","Versão 3.8 (2026-05-01)<br>Download direto:");
                 setValor("descricao","BG Finanças é um software open source voltado para você que quer controlar sua vida financeira, seu foco é usar contas para armazenar dinheiro e lançar despesas/receitas para alterar o saldo das contas. Contando com seu módulo de planejamento, relatórios e capacidade de acompanhar os gastos, BG Finanças será um grande aliado na gerência de seu dinheiro.");
                 setValor("java","Para que o sistema funcione é necessário instalar o <font style='font-weight:bold !important'>Java</font>.<br />Faça o download clicando <a href='http://java.com/pt_BR/' target='_blank'>aqui</a>.");
+                atualizarVersao();
             }
             function setValor(campo, valor){
                 document.getElementById(campo).innerHTML = valor;
