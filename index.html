@@ -22,6 +22,10 @@
                 versaoAtual = data.tag_name.replace('v','');
                 dataLancamento = data.published_at.substring(0,10);
                 atualizarVersao();
+                var deb = data.assets.find(function(a){ return a.name.endsWith('.deb'); });
+                var msi = data.assets.find(function(a){ return a.name.endsWith('.msi'); });
+                if(deb) document.getElementById('link_ubuntu').href = deb.browser_download_url;
+                if(msi) document.getElementById('link_windows').href = msi.browser_download_url;
               });
 
             function atualizarVersao(){
@@ -118,8 +122,8 @@
                         </ul>
                         <div align="center" style="margin-left:-20px;">
                             <p id="download_direto" style="padding-bottom:5px;padding-left:18px;">Versão 3.8 (2026-05-01)<br>Download direto:</p>
-                            <a href="#" onclick="abrirDownload('download_windows.html');"><img src="windows.png" /></a>
-                            <a href="#" onclick="abrirDownload('download_ubuntu.html');"><img src="ubuntu.png" /></a>
+                            <a id="link_windows" href="#"><img src="windows.png" /></a>
+                            <a id="link_ubuntu" href="#"><img src="ubuntu.png" /></a>
                         </div>
                     </div>
                 </div>
